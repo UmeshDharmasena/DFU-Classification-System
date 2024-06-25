@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Classification Result</h2>
+    <img src="{{ url_for('uploaded_file', filename=image_path) }}" alt="Uploaded Image"> <div style="width:50%">
+    <p><strong>Classification:</strong> {{ class_label }}</p>
+    <p><strong>Description:</strong> {{ description }}</p></div>
+    
+    <form method="post" enctype="multipart/form-data" action="/"> 
+        <input type="file" name="file">
+        <input type="submit" value="Classify">
+    </form>
+</body>
+</html>
